@@ -15,6 +15,8 @@ I first cleaned the column names as they were in the fifth row of the dataset. I
 
 <iframe src="assets/uni.html" width=800 height=600 frameBorder=0></iframe>
 
+As you can see, outages per year steadily decreases from 2011 to 
+
 
 
 
