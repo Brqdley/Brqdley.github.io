@@ -15,7 +15,10 @@ I first cleaned the column names as they were in the fifth row of the dataset. I
 
 <iframe src="assets/uni.html" width=800 height=600 frameBorder=0></iframe>
 
-As you can see, outages per year steadily decreases from 2011 to 
+This plot shows the amount of outages per year from 2000 to 2016. As you can see, outages per year steadily increases from 2000 to 2011, then decreases from 2011 to 2016. There is a peak at 2011. This could be due to the 2011 Southwest blackout which effected more than 2.7m customers.
+
+<iframe src="assets/bi.html" width=800 height=600 frameBorder=0></iframe>
+This plot shows the amount of outages with warm/normal/cold climates in different cause categories. One interesting trend is that for fuel supply emergenices, it is rarely in warm weather. One could infer that fuel supply is harder to recieve in colder climates, due to pipe issues or transporting issues, which is why the chart displays this.
 
 
 
