@@ -10,7 +10,7 @@ The dataset I chose was outages. The question I plan to investigate further is, 
 
 **Cleaning and EDA:**
 
-I first cleaned the column names as they were in the fifth row of the dataset. I set this as the column names and then dropped the first 5 rows. Then I reset the index. I convert ANOMALY.LEVEL and OUTAGE.DURATION to floats, so I could compute means/sums with them in the future.
+I first cleaned the column names as they were in the fifth row of the dataset. I set this as the column names and then dropped the first 5 rows. Then I reset the index. I converted ANOMALY.LEVEL and OUTAGE.DURATION to floats, so I could compute means/sums with them in the future.
 
 I converted the OUTAGE.START.TIMES and the OUTAGE.START.DATES to one column of datetime to simplify the dataframe. I also converted the RESTORATION.START.TIMES and RESTORATION.START.DATES to one column of datetime. Although converting the times to pd.datetime made it much easier to groupby date and time, as I could now use functions on this data, grouping both times into one datetime column did not affect my analysis, it only made it easier for me to understand the data.
 
