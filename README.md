@@ -32,7 +32,7 @@ This plot shows the amount of outages per year from 2000 to 2016. As you can see
 This plot shows the amount of outages with warm/normal/cold climates in different cause categories. One interesting trend is that for fuel supply emergenices, it is rarely in warm weather. One could infer that fuel supply is harder to recieve in colder climates, due to pipe issues or transporting issues, which is why the chart displays this.
 
 
-<iframe src="assets/pivot.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="assets/pivot.html" width=300 height=300 frameBorder=0></iframe>
 
 This table shows that fuel supply emergencies have the longest outage duration, while islanding has the shortest outage duration.
 
