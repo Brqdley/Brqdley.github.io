@@ -46,7 +46,7 @@ Is there a significant difference in the number of severe weather outages in col
 
 Null hypothesis: there is not a signifcant difference between the number of severe weather outages in cold versus warm climates. i.e. cold=warm
 
-Alternate hypothesis: there is a signifcant difference between the number of severe weather outages in cold versus warm climates. i.e. cold=&vert;warm
+Alternate hypothesis: there is a signifcant difference between the number of severe weather outages in cold versus warm climates. i.e. cold!=warm
 
 Significance level: .05
 
