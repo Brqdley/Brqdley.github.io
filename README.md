@@ -1,18 +1,18 @@
-DSC80 Project - Outages 
+**DSC80 Project - Outages** 
 Climate and Cause
 
-Introduction:
+**Introduction:**
 
-The dataset I chose was outages. The question I plan to investigate further is, is there a relationship between climate, the cause category, and the number of outages? I feel as though a relationship between those columns is prevalent based off of looking at the dataset. If a cause category is more prevalent in a certain type of climate, these companies can impliment more preventative measures against specific causes in certain locations. 
+The dataset I chose was outages. The question I plan to investigate further is, is there a relationship between climate, the cause category, and the number of outages? I feel as though a relationship between those columns is prevalent based off of looking at the dataset. If a cause category is more prevalent in a certain type of climate, these companies can implement more preventative measures against specific causes in certain locations. 
 
-1534 rows in the dataset, and relevant columns are YEAR, CLIMATE.CATEGORY, CAUSE.CATEGORY, CLIMATE.REGION. Year is the year the outage occured. Climate category(normal,cold,warm) is the type of climate the outage occured in. Cause category(severe weather, etc) is the type of cause the outage occured in. Climate region(south,central,etc) is the climate region the outage occured in.
+1534 rows in the dataset, and relevant columns are YEAR, CLIMATE.CATEGORY, CAUSE.CATEGORY, CLIMATE.REGION. Year is the year the outage occured. Climate category(normal,cold,warm) is the type of climate the outage occurred in. Cause category(severe weather, etc) is the type of cause the outage occurred in. Climate region(south,central,etc) is the climate region the outage occurred in.
 
 
-Cleaning and EDA:
+**Cleaning and EDA:**
 
 I first cleaned the column names as they were in the fifth row of the dataset. I set this as the column names and then dropped the first 5 rows. Then I reset the index. I convert ANOMALY.LEVEL and OUTAGE.DURATION to floats, so I could compute means/sums with them in the future.
 
-I converted the OUTAGE.START.TIMES and the OUTAGE.START.DATES to one column of datetime to simplify the dataframe. I also converted the RESTORATION.START.TIMES and RESTORATION.START.DATES to one column of datetime. Although converting the times to pd.datetime made it much easier to groupby dates and times, as I could now use functions on this data, grouping both times into one datetime column did not effect my analysis, it only made it easier for me to understand the data.
+I converted the OUTAGE.START.TIMES and the OUTAGE.START.DATES to one column of datetime to simplify the dataframe. I also converted the RESTORATION.START.TIMES and RESTORATION.START.DATES to one column of datetime. Although converting the times to pd.datetime made it much easier to groupby date and time, as I could now use functions on this data, grouping both times into one datetime column did not affect my analysis, it only made it easier for me to understand the data.
 
 |   OBS |   YEAR |   MONTH | U.S._STATE   | POSTAL.CODE   | NERC.REGION   | CLIMATE.REGION     |   ANOMALY.LEVEL | CLIMATE.CATEGORY   | CAUSE.CATEGORY     | CAUSE.CATEGORY.DETAIL   |   HURRICANE.NAMES |   OUTAGE.DURATION |   DEMAND.LOSS.MW |   CUSTOMERS.AFFECTED |   RES.PRICE |   COM.PRICE |   IND.PRICE |   TOTAL.PRICE |   RES.SALES |   COM.SALES |   IND.SALES |   TOTAL.SALES |   RES.PERCEN |   COM.PERCEN |   IND.PERCEN |   RES.CUSTOMERS |   COM.CUSTOMERS |   IND.CUSTOMERS |   TOTAL.CUSTOMERS |   RES.CUST.PCT |   COM.CUST.PCT |   IND.CUST.PCT |   PC.REALGSP.STATE |   PC.REALGSP.USA |   PC.REALGSP.REL |   PC.REALGSP.CHANGE |   UTIL.REALGSP |   TOTAL.REALGSP |   UTIL.CONTRI |   PI.UTIL.OFUSA |   POPULATION |   POPPCT_URBAN |   POPPCT_UC |   POPDEN_URBAN |   POPDEN_UC |   POPDEN_RURAL |   AREAPCT_URBAN |   AREAPCT_UC |   PCT_LAND |   PCT_WATER_TOT |   PCT_WATER_INLAND | OUTAGE.START.DATETIME   | OUTAGE.RESTORATION.DATETIME   |
 |------:|-------:|--------:|:-------------|:--------------|:--------------|:-------------------|----------------:|:-------------------|:-------------------|:------------------------|------------------:|------------------:|-----------------:|---------------------:|------------:|------------:|------------:|--------------:|------------:|------------:|------------:|--------------:|-------------:|-------------:|-------------:|----------------:|----------------:|----------------:|------------------:|---------------:|---------------:|---------------:|-------------------:|-----------------:|-----------------:|--------------------:|---------------:|----------------:|--------------:|----------------:|-------------:|---------------:|------------:|---------------:|------------:|---------------:|----------------:|-------------:|-----------:|----------------:|-------------------:|:------------------------|:------------------------------|
@@ -40,7 +40,7 @@ This plot shows the amount of outages with warm/normal/cold climates in differen
 
 This table shows that fuel supply emergencies have the longest outage duration, while islanding has the shortest outage duration.
 
-NMAR Analysis:
+**NMAR Analysis:**
 CAUSE.DETAIL could be NMAR. Value could be NA if detail is too specific, would not fit into a "category" of detail.
 Adding column that asks if detail is too specific or not could be one way to test if the cause is dependent on this variable.If these columns overlap with significance then the CAUSE.DETAIL column is MAR.
 
@@ -50,7 +50,7 @@ Assessment of Missingness:
 This graph shows the empirical distribution of the test statistic and where the observed test statistic lands. The p-value of 0.0 indicates that the observed data is unlikely to have occurred if the null hypothesis were true, and suggests that we should reject the null hypothesis in favor of the alternative hypothesis that there is an association between HURRICANE.NAMES and the missingness of CAUSE.CATEGORY.DETAIL.
 
 
-Hypothesis Testing:
+**Hypothesis Testing:**
 
 Is there a significant difference in the number of severe weather outages in cold versus warm climates?
 
