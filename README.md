@@ -21,24 +21,30 @@ I converted the outage start times and the outage start dates to one column of d
 |     4 |   2012 |       6 | Minnesota    | MN            | MRO           | East North Central |            -0.1 | normal             | severe weather     | thunderstorm            |               nan |              2550 |              nan |                68200 |       11.79 |        9.25 |        6.71 |          9.19 |     1851519 |     1941174 |     1993026 |       5787064 |      31.9941 |      33.5433 |      34.4393 |         2317336 |          278466 |           11010 |           2606813 |        88.8954 |        10.6822 |         0.4224 |              51598 |            48156 |          1.07148 |                 0.6 |           5364 |          277627 |       1.93209 |             2.2 |      5380443 |          73.27 |       15.28 |           2279 |      1700.5 |           18.2 |            2.14 |          0.6 |    91.5927 |         8.40733 |            5.47874 | 2012-06-19 04:30:00     | 2012-06-20 23:00:00           |
 |     5 |   2015 |       7 | Minnesota    | MN            | MRO           | East North Central |             1.2 | warm               | severe weather     | nan                     |               nan |              1740 |              250 |               250000 |       13.07 |       10.16 |        7.74 |         10.43 |     2028875 |     2161612 |     1777937 |       5970339 |      33.9826 |      36.2059 |      29.7795 |         2374674 |          289044 |            9812 |           2673531 |        88.8216 |        10.8113 |         0.367  |              54431 |            49844 |          1.09203 |                 1.7 |           4873 |          292023 |       1.6687  |             2.2 |      5489594 |          73.27 |       15.28 |           2279 |      1700.5 |           18.2 |            2.14 |          0.6 |    91.5927 |         8.40733 |            5.47874 | 2015-07-18 02:00:00     | 2015-07-19 07:00:00           |
 
-
+Univariate Analysis:
 <iframe src="assets/uni.html" width=800 height=600 frameBorder=0></iframe>
 
 This plot shows the amount of outages per year from 2000 to 2016. As you can see, outages per year steadily increases from 2000 to 2011, then decreases from 2011 to 2016. There is a peak at 2011. This could be due to the 2011 Southwest blackout which effected more than 2.7m customers.
 
-
+Bivariate Analysis:
 <iframe src="assets/bi.html" width=800 height=600 frameBorder=0></iframe>
 
 This plot shows the amount of outages with warm/normal/cold climates in different cause categories. One interesting trend is that for fuel supply emergenices, it is rarely in warm weather. One could infer that fuel supply is harder to recieve in colder climates, due to pipe issues or transporting issues, which is why the chart displays this.
 
 
+
+Interesting Aggregates:
 <iframe src="assets/pivot.html" width=600 height=300 frameBorder=0></iframe>
 
 This table shows that fuel supply emergencies have the longest outage duration, while islanding has the shortest outage duration.
 
-
+NMAR Analysis:
 CAUSE.DETAIL could be NMAR. Value could be NA if detail is too specific, would not fit into a "category" of detail.
-Adding column that asks if detail is too specific or not could be one way to test if the cause is dependent on this variable.Tf these columns overlap with significance then the CAUSE.DETAIL column is MAR.
+Adding column that asks if detail is too specific or not could be one way to test if the cause is dependent on this variable.If these columns overlap with significance then the CAUSE.DETAIL column is MAR.
+
+Missingness Dependency:
+
+Hypothesis Testing:
 
 
 
