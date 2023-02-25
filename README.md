@@ -1,9 +1,17 @@
 DSC80 Project - Outages
 
+Introduction:
+Provide an introduction to your dataset, and clearly state the one question your analysis is centered around. Why should readers of your website care about the dataset and your question specifically? Report the number of rows in the dataset, the names of the columns that are relevant to your question, and descriptions of those relevant columns.
+
+The dataset I chose was outages. The question I plan to investigate further is, is there a relationship between climate, the cause category, and the number of outages? I feel as though a relationship between those columns is prevalent based off of looking at the dataset. If a cause category is more prevalent in a certain type of climate, these companies can impliment more preventative measures against specific causes in certain locations. 
+
+1534 rows in the dataset, and relevant columns are YEAR, CLIMATE.CATEGORY, CAUSE.CATEGORY, CLIMATE.REGION.
+
+
 Data Cleaning:
 I first cleaned the column names as they were in the fifth row of the dataset. I set this as the column names and then dropped the first 5 rows. Then I reset the index. I convert ANOMALY.LEVEL and OUTAGE.DURATION to floats, so I could compute means/sums with them in the future.
 
- I converted the outage start times and the outage start dates to one column of datetime to simplify the dataframe. I also converted the restoration start times and start dates to one column of datetime. Although converting the times to pd.datetime made it much easier to groupby dates and times, as I could now use functions on this data, grouping both times into one datetime column did not effect my analysis, it only made it easier for me to understand the data.
+I converted the outage start times and the outage start dates to one column of datetime to simplify the dataframe. I also converted the restoration start times and start dates to one column of datetime. Although converting the times to pd.datetime made it much easier to groupby dates and times, as I could now use functions on this data, grouping both times into one datetime column did not effect my analysis, it only made it easier for me to understand the data.
 
  |   OBS |   YEAR |   MONTH | U.S._STATE   | POSTAL.CODE   | NERC.REGION   | CLIMATE.REGION     |   ANOMALY.LEVEL | CLIMATE.CATEGORY   | CAUSE.CATEGORY     | CAUSE.CATEGORY.DETAIL   |   HURRICANE.NAMES |   OUTAGE.DURATION |   DEMAND.LOSS.MW |   CUSTOMERS.AFFECTED |   RES.PRICE |   COM.PRICE |   IND.PRICE |   TOTAL.PRICE |   RES.SALES |   COM.SALES |   IND.SALES |   TOTAL.SALES |   RES.PERCEN |   COM.PERCEN |   IND.PERCEN |   RES.CUSTOMERS |   COM.CUSTOMERS |   IND.CUSTOMERS |   TOTAL.CUSTOMERS |   RES.CUST.PCT |   COM.CUST.PCT |   IND.CUST.PCT |   PC.REALGSP.STATE |   PC.REALGSP.USA |   PC.REALGSP.REL |   PC.REALGSP.CHANGE |   UTIL.REALGSP |   TOTAL.REALGSP |   UTIL.CONTRI |   PI.UTIL.OFUSA |   POPULATION |   POPPCT_URBAN |   POPPCT_UC |   POPDEN_URBAN |   POPDEN_UC |   POPDEN_RURAL |   AREAPCT_URBAN |   AREAPCT_UC |   PCT_LAND |   PCT_WATER_TOT |   PCT_WATER_INLAND | OUTAGE.START.DATETIME   | OUTAGE.RESTORATION.DATETIME   |
 |------:|-------:|--------:|:-------------|:--------------|:--------------|:-------------------|----------------:|:-------------------|:-------------------|:------------------------|------------------:|------------------:|-----------------:|---------------------:|------------:|------------:|------------:|--------------:|------------:|------------:|------------:|--------------:|-------------:|-------------:|-------------:|----------------:|----------------:|----------------:|------------------:|---------------:|---------------:|---------------:|-------------------:|-----------------:|-----------------:|--------------------:|---------------:|----------------:|--------------:|----------------:|-------------:|---------------:|------------:|---------------:|------------:|---------------:|----------------:|-------------:|-----------:|----------------:|-------------------:|:------------------------|:------------------------------|
@@ -31,6 +39,8 @@ This table shows that fuel supply emergencies have the longest outage duration, 
 
 CAUSE.DETAIL could be NMAR. Value could be NA if detail is too specific, would not fit into a "category" of detail.
 Adding column that asks if detail is too specific or not could be one way to test if the cause is dependent on this variable.Tf these columns overlap with significance then the CAUSE.DETAIL column is MAR.
+
+
 
 
 
