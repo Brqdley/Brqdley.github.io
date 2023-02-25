@@ -12,7 +12,7 @@ I first cleaned the column names as they were in the fifth row of the dataset. I
 
 I converted the OUTAGE.START.TIMES and the OUTAGE.START.DATES to one column of datetime to simplify the dataframe. I also converted the RESTORATION.START.TIMES and RESTORATION.START.DATES to one column of datetime. Although converting the times to pd.datetime made it much easier to groupby dates and times, as I could now use functions on this data, grouping both times into one datetime column did not effect my analysis, it only made it easier for me to understand the data.
 
-<iframe src="head/uni.html" frameBorder=0></iframe>
+<iframe src="head/uni.html" width=600 height=600 frameBorder=0></iframe>
 
 
 Univariate Analysis:
@@ -42,6 +42,7 @@ Missingness Dependency:
 This graph shows the empirical distribution of the test statistic and where the observed test statistic lands. The p-value of 0.0 indicates that the observed data is unlikely to have occurred if the null hypothesis were true, and suggests that we should reject the null hypothesis in favor of the alternative hypothesis that there is an association between HURRICANE.NAMES and the missingness of CAUSE.CATEGORY.DETAIL.
 
 Hypothesis Testing:
+
 Is there a significant difference in the number of severe weather outages in cold versus warm climates?
 
 Null hypothesis: there is not a signifcant difference between the number of severe weather outages in cold versus warm climates. i.e. cold=warm
