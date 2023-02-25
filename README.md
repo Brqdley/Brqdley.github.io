@@ -40,11 +40,12 @@ This plot shows the amount of outages with warm/normal/cold climates in differen
 
 This table shows that fuel supply emergencies have the longest outage duration, while islanding has the shortest outage duration.
 
-
 **Assessment of Missingness:**
 
 CAUSE.DETAIL could be NMAR. Value could be NA if detail is too specific, would not fit into a "category" of detail.
 Adding column that asks if detail is too specific or not could be one way to test if the cause is dependent on this variable.If these columns overlap with significance then the CAUSE.DETAIL column is MAR.
+
+
 
 <iframe src="assets/tvd_hurricane.html" width=600 height=600 frameBorder=0></iframe>
 
