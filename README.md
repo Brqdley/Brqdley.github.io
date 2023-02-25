@@ -12,7 +12,7 @@ I first cleaned the column names as they were in the fifth row of the dataset. I
 
 I converted the OUTAGE.START.TIMES and the OUTAGE.START.DATES to one column of datetime to simplify the dataframe. I also converted the RESTORATION.START.TIMES and RESTORATION.START.DATES to one column of datetime. Although converting the times to pd.datetime made it much easier to groupby dates and times, as I could now use functions on this data, grouping both times into one datetime column did not effect my analysis, it only made it easier for me to understand the data.
 
-<iframe src="head/uni.html" width=600 height=600 frameBorder=0></iframe>
+<iframe src="assets/head.html" frameBorder=0></iframe>
 
 
 Univariate Analysis:
