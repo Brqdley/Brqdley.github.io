@@ -43,7 +43,7 @@ CAUSE.DETAIL could be NMAR. Value could be NA if detail is too specific, would n
 Adding column that asks if detail is too specific or not could be one way to test if the cause is dependent on this variable.If these columns overlap with significance then the CAUSE.DETAIL column is MAR.
 
 Missingness Dependency:
-<iframe src="assets/tvd_hurricane.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="assets/tvd_hurricane.html" width=600 height=600 frameBorder=0></iframe>
 
 This graph shows the empirical distribution of the test statistic and where the observed test statistic lands. The p-value of 0.0 indicates that the observed data is unlikely to have occurred if the null hypothesis were true, and suggests that we should reject the null hypothesis in favor of the alternative hypothesis that there is an association between HURRICANE.NAMES and the missingness of CAUSE.CATEGORY.DETAIL.
 
