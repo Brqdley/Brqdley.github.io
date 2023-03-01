@@ -1,4 +1,4 @@
-**DSC80 Project - Outages** 
+**Project - Outages** 
 Climate and Cause
 
 **Introduction:**
